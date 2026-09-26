@@ -1,4 +1,3 @@
-import "./content.css";
 import { Link } from "react-router-dom";
 import FadeSlider from "../components/FadeSlider/FadeSlider";
 import ThumbnailGrid from "../components/ProjectGrid/ProjectGrid";
@@ -11,13 +10,23 @@ function FrontPage() {
       <ul>
         <li>
           <Link to="/basement">
-            <Button>Kælder</Button>
+            <Button>Kælderen</Button>
           </Link>
         </li>
 
         <li>
           <Link to="/plenum">
             <Button>Plenum</Button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/stuen">
+            <Button>Stueetagen</Button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/soverum">
+            <Button>Soverum</Button>
           </Link>
         </li>
       </ul>
