@@ -1,0 +1,77 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  align-items: center;
+  z-index: 10; /* to make NavBar appear above other elements */
+  top: 0;
+  height: 88px;
+  color: #1d1b19;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #f4f0e8;
+  padding: 0 48px;
+  background-color: var(--background-color);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center; /* centers vertically */
+  justify-content: center; /* centers horizontally */
+  color: #261200;
+}
+.logo-link:hover {
+  color: #341800;
+}
+
+.logo {
+  height: 48px;
+  display: block; /* optional: removes extra inline spacing */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.nav-menu a {
+  color: #261200;
+}
+
+/* Hide menu links on small screens */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* adjust depending on navbar height */
+    left: 0;
+    width: 100%;
+    gap: 0rem;
+    padding: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+    max-height: 0;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    max-height: 700px;
+    margin: 0;
+    padding: 0 0 24px 0px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu li {
+    padding: 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,38 @@
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  column-gap: 16px; /* horizontal gap */
+  row-gap: 24px; /* vertical gap */
+  max-width: 1440px; /* max width */
+  margin: 0 auto; /* center horizontally */
+  padding: 0 16px; /* horizontal padding for smaller screens */
+  box-sizing: border-box;
+}
+
+.project-thumbnail img {
+  width: 100%; /* fill the grid cell */
+  height: auto; /* maintain aspect ratio */
+  display: block; /* remove inline spacing */
+}
+
+/* Responsive for tablets or medium screens if needed */
+@media (max-width: 1200px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column, 16px margin to edges */
+@media (max-width: 480px) {
+  .thumbnail-grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px; /* margin to edges */
+    row-gap: 24px; /* vertical spacing */
+  }
+}

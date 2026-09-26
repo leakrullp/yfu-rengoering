@@ -1,0 +1,15 @@
+.project-data {
+  gap: 0rem;
+  margin: 1rem 0;
+}
+.project-data h2 {
+  font-family: "Switzer-Medium";
+}
+
+.project-data > * {
+  margin: 0;
+  padding: 0;
+}
+.project-data h2 p {
+  color: #1d1b19;
+}
